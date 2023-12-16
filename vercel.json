@@ -1,0 +1,21 @@
+{
+    "name": "your-project-name",
+    "version": 2,
+    "builds": [
+      {
+        "src": "path/to/your/source",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/$1",
+        "methods":["POST","PUT","PATCH","DELETE","GET","OPTIONS"]
+      }
+    ]
+  }
